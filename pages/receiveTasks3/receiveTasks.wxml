@@ -1,0 +1,19 @@
+<view>
+  <view class='tasks' wx:for='{{tasks}}'  wx:key='this' wx:if="{{!mode}}">
+      <view class='number'>编号：{{item.createTime||"暂无"}}</view>
+      <view class='tasksItem' data-elementId='{{item.id}}' bindtap='showTaskDetail'>
+      <text class='driver'>主驾：{{item.driveraName||"暂无"}}</text>
+      <text class='driver'>副驾：{{item.driverbName||"暂无"}}</text>
+      <text class='address'>卸货地址：{{item.destination||"暂无"}}</text>
+    </view>
+  </view>
+  <view class='tasks' wx:for='{{tasksWithMode}}'  wx:key='this'>
+      <view class='number'>编号：{{item.createTime||"暂无"}}</view>
+    <view class='tasksItem' data-elementId='{{item.id}}' bindtap='showTaskDetailTmp'>
+      <text class='driver'>主驾：{{item.driveraName||"暂无"}}</text>
+      <text class='driver'>副驾：{{item.driverbName||"暂无"}}</text>
+      <text class='address'>卸货地址：{{item.destination||"暂无"}}</text>
+      <text class='address'>状态：<text style='color:{{item.state==0?"green":"#333"}}'>{{item.mode||"暂无"}}</text></text>
+    </view>
+  </view>
+</view>

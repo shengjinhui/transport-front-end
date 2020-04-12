@@ -1,0 +1,99 @@
+.mt20{
+  margin-top: 20rpx;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  color: #676767;
+  padding: 30rpx 0;
+}
+
+.line{
+  width: 100%;
+  padding: 0 20px;
+  /* border: 1px solid #f0f0f0;
+  background-color: #fff; */
+}
+.mod-a{
+  padding: 0 20rpx;
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.mod{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+  padding: 0 20rpx;
+  /* border: 1px solid  #f0f0f0; */
+  background-color: #fff;
+}
+
+/* .driver-a{
+   padding: 0 20rpx;
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+} */
+
+.input{
+  text-align: right;
+ 
+}
+.mod .key{
+  width: 150rpx;
+  color: #b2b2b2;
+  height: 44rpx;
+}
+/* .mod .value{
+  width: 20rpx;
+
+} */
+.driver-a,.head-number,.type,.address,.single-tonnage,.address2{
+  border-bottom: 1px solid #f0f0f0;
+}
+.arrow-r{
+  width: 9rpx;
+  height: 17rpx;
+  margin-left: 10rpx;
+}
+
+.arrow-d{
+  width: 17rpx;
+  height: 9rpx;
+  margin-left: 10rpx;
+}
+.icon{
+  display: flex;
+  flex-direction: row;
+}
+.delete{
+  width: 50rpx;
+  height: 50rpx;
+}
+.add{
+  width:65rpx;
+  height: 65rpx;
+}
+
+.buttomItem {
+  width: 60%;
+  vertical-align: middle;
+  margin-top: 100rpx;
+
+}
+
+.buttom {
+  background-color: #17c087;
+  
+}
+
+
+/* .driver-a  .value{
+  width: 500rpx;
+  line-height: 48rpx;
+  overflow: hidden;
+} */

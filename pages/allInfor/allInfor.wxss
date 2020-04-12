@@ -1,0 +1,67 @@
+/* pages/allInfor/allInfor.wxss */
+
+page {
+  width: 100%;
+  background: #f5f5dd;
+}
+
+.all {
+  width: 94%;
+  height: 94%;
+  margin: 3% 3%;
+  border-radius: 6px;
+  background: white;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.lineItem {
+  width: 50%;
+  margin: 4% 0 2% 10%;
+}
+
+.attribute {
+  font-size: 18px;
+}
+
+.lable {
+  background: #f5f5f5;
+  font-size: 17px;
+  width: 50%;
+  padding: 1px 5%;
+  text-align: center;
+}
+
+.addressItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 4%;
+  margin-left: 10%;
+}
+
+.addressAttribute {
+  font-size: 18px;
+}
+
+.distanceItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 17px;
+  margin-top: 3%;
+}
+
+.width {
+  width: 50%;
+}
+
+.turnImags {
+  width: 40px;
+  height: 140px;
+  margin-left: 15%;
+}

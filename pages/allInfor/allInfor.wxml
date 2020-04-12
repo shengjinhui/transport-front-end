@@ -1,0 +1,71 @@
+<view class='all'>
+  <view class='line'>
+    <view class='lineItem'>
+      <text class='attribute'>主驾：</text>
+      <text class='lable'>{{taskDetails.driveraName||"暂无"}}</text>
+    </view>
+    <view class='lineItem'>
+      <text class='attribute'>副驾：</text>
+      <text class='lable'>{{taskDetails.driverbName||'暂无'}}</text>
+    </view>
+  </view>
+  <view class='line'>
+    <view class='lineItem'>
+      <text class='attribute'>车头：</text>
+      <text class='lable'>{{taskDetails.headstock||"暂无"}}</text>
+    </view>
+    <view class='lineItem'>
+      <text class='attribute'>挂车：</text>
+      <text class='lable'>{{taskDetails.semitrailer||"暂无"}}</text>
+    </view>
+  </view>
+  <view class='line'>
+    <view class='lineItem'>
+      <text class='attribute'>货物：</text>
+      <text class='lable'>{{taskDetails.goods||"暂无"}}</text>
+    </view>
+    <view class='lineItem'>
+      <text class='attribute'>吨数：</text>
+      <text class='lable'>{{taskDetails.grossTonnage||"暂无"}}</text>
+      吨
+    </view>
+  </view>
+
+
+
+  <view class='addressItem'>
+    <text class='addressAttribute'>出发地点：</text>
+    <text class='lable'>{{taskDetails.originLocation||"暂无"}}</text>
+  </view>
+
+  <view class='distanceItem'>
+    <image class='turnImags' src='../../images/drectionDown.png'></image>
+    <view class='width'>
+      <text class='addressAttribute'>路程：</text>
+      <text class='lable'>{{taskDetails.places[1].kilometer||"暂无"}}</text>
+      公里
+    </view>
+
+  </view>
+
+  <view class='addressItem'>
+    <text class='addressAttribute'>接货地点：</text>
+    <text class='lable'>{{taskDetails.getStaffLocation||"暂无"}}</text>
+  </view>
+<block wx:for="{{destinations}}">
+  <view class='distanceItem'>
+    <image class='turnImags' src='../../images/drectionDown.png'></image>
+    <view class='width'>
+      <text class='addressAttribute'>路程：</text>
+      <text class='lable'>{{item.kilometer||"暂无"}}</text>
+      公里
+    </view>
+
+  </view>
+
+  <view class='addressItem'>
+    <text class='addressAttribute'>卸货地点：</text>
+    <text class='lable'>{{item.placeName||"暂无"}}</text>
+  </view>
+</block>
+</view>

@@ -1,0 +1,96 @@
+<view class='container'>
+  <view class='line'>
+    <view class='mod-a mt20'>
+      <view class='mod driver-a'>
+        <text class='key'>主驾驶</text>
+        <picker mode='selector' bindchange="bindPickerChange" data-id='0' range='{{arrayMain}}' range-key='username'>
+          <view class='inputBox {{selected1}}'>
+            {{arrayMain[index].username}}
+            <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+          </view>
+        </picker>
+      </view>
+      <view class='mod driver-b'>
+        <text class='key'>副驾驶</text>
+        <picker mode='selector' bindchange="bindPickerChange" data-id="1" range="{{arrayTemp}}" range-key="username"> 
+          <view class='inputBox {{selected2}}'>
+           {{arrayTemp[indexTemp].username}}
+            <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='mod-a mt20'>
+
+      <view class='mod head-number'>
+        <text class='key'>车头</text>
+        <picker mode='selector' bindchange="bindPickerChange" data-id='2' range='{{headStock}}'>
+          <view class='value'>{{headStock[headStockIndex]}}
+            <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+          </view>
+        </picker>
+      </view>
+
+      <view class='mod end-number'>
+        <text class='key'>挂车</text>
+        <picker mode='selector' bindchange="bindPickerChange" data-id='3' range='{{semitrailer}}'>
+          <view class='value'>{{semitrailer[semitrailerIndex]}}
+            <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class='mod-a mt20'>
+      <view class='mod type'>
+        <text class='key'>货物</text>
+        <picker mode='selector' bindchange="bindPickerChange" data-id='4' range="{{staff}}">
+          <view class='value'>{{staff[staffIndex]}}
+            <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+          </view>
+        </picker>
+      </view>
+
+
+      <view class='mod address2'>
+        <text class='key'>提货地址</text>
+        <input bindinput='getStaffLocation' class="input" maxlength='10' placeholder="请输入提货地点" />
+      </view>
+   
+
+      <view class='mod tonnage'>
+        <text class='key'>总吨数</text>
+        <input bindinput="getWeight" class="input" name="weight" maxlength='10' placeholder="请输入总吨数" />
+      </view>
+    </view>
+
+   
+
+   
+      <view class='unloadInfo' wx:for="{{unloadLocation}}">
+       <view class='mod-a mt20'>
+        <view class='mod address'>
+          <text class='key'>卸货地址{{index+1}}</text>
+          <input data-id='{{index}}' bindinput='getUnloadLocation' class="input" maxlength='50' placeholder="请输入卸货地址"/>
+        </view>
+        <view class='mod single-tonnage'>
+          <text class='key' data-id='{{index}}'>卸货吨数</text>
+          <input data-id='{{index}}' bindinput='getUnloadWeight' class="input" maxlength='10' placeholder="请输入卸货吨数" />
+        </view>
+       </view>
+         </view>
+
+      <view class='mod icon'>
+      <view  bindtap='delete' data-id='{{index}}'>
+        <image class='delete' src='/images/icon_delete@3x.png'></image>
+      </view>
+      <view  class='add' catchtap='addLocation' bindtouchend='removeClass'>
+        <image  class='add' src='/images/add_selected.png'></image>
+         </view>
+    </view>
+    </view>
+
+  <view class="buttomItem">
+    <button class="buttom" bindtap='formSubmit' form-type='submit' type="primary">立即提交 </button>
+  </view> 
+</view>

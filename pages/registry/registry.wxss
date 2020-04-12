@@ -1,0 +1,11 @@
+page{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+button{
+ position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%)
+}

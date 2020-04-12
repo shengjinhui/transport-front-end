@@ -1,0 +1,35 @@
+<view wx:if="{{!task}}" class='none'>当前暂无任务</view>
+<block wx:if="{{task}}">
+<view wx:if="{{!flag}}">
+  <view class='number'>时间：{{task.createTime}}</view>
+  <view class='information'>
+    <view class='line'>
+      <text class='lineItem'>主驾：{{task.driveraName}}</text>
+      <text class='lineItem'>副驾：{{task.driverbName}}</text>
+    </view>
+    <view class='line'>
+      <text class='lineItem'>车头：{{task.headstock||"暂无"}}</text>
+      <text class='lineItem'>挂车：{{task.semitrailer||"暂无"}}</text>
+    </view>
+    <view class='address'>接货地址：{{task.getStaffLocation}}</view>
+    <view class='address'>卸货地址：{{task.destination}}</view>
+  </view>
+  <button class='taskStart' bindtap='taskStart'>开始任务</button>
+</view>
+<view wx:if="{{flag}}">
+  <view class='number'>时间：{{task.createTime}}</view>
+  <view class='information'>
+    <view class='line'>
+      <text class='lineItem'>主驾：{{task.driveraName}}</text>
+      <text class='lineItem'>副驾：{{task.driverbName}}</text>
+    </view>
+    <view class='line'>
+      <text class='lineItem'>车头：{{task.headstock||"暂无"}}</text>
+      <text class='lineItem'>挂车：{{task.semitrailer||"暂无"}}</text>
+    </view>
+    <view class='address'>接货地址：{{task.getStaffLocation}}</view>
+    <view class='address'>卸货地址：{{task.destination}}</view>
+  </view>
+  <button class='taskStart' bindtap='taskFinish'>完成任务</button>
+</view>
+</block>

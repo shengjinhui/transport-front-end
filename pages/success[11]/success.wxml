@@ -1,0 +1,37 @@
+<view bindsubmit='submitForm'>
+  <view class='totalMileage'>
+    <text class='lable'>总里程：</text>
+    <input class='inputBox' type='number' bindinput='getTotalLength' value="{{totalLength}}"></input>
+    <text class='unit'>公里</text>
+  </view>
+
+  <view class='addressItem'>
+    <text class='lable'>出发地点:</text>
+    <input class='inputBox' type="Text" bindinput='getOriginalLocation'></input>
+  </view>
+
+  <view class='distanceItem'>
+    <image class='turnImags' src='../../images/drectionDown.png'></image>
+    <text class='distanceLable'>路程：</text>
+    <input class='inputTwo' type='number' name='distance' bindinput='getFirstLength'></input>
+  </view>
+
+  <view class='addressItem'>
+    <text class='lable'>接货地点：{{getStaffLocation||'暂无数据'}}</text>
+  </view>
+<block wx:for="{{destinations}}">
+  <view class='distanceItem'>
+    <image class='turnImags' src='../../images/drectionDown.png'></image>
+    <text class='distanceLable'>路程：</text>
+    <input class='inputTwo' type='number' bindinput='getSecondLength' data-index="{{index}}" value='{{lengthArr[index]}}'></input>
+  </view>
+
+  <view class='addressItem'>
+    <text class='lable'>卸货地点：{{item.placeName||'暂无数据'}}</text>
+  </view>
+</block>
+  <!-- <view class='but_add' bindtap='addLocation'>点击添加卸货地点</view> -->
+  <button class='buttom' bindtap='sendMessage'>完成任务</button>
+
+
+</view>

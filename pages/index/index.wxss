@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.backgroundImg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.button{
+  padding-top: 105%
+}
+
+.buttonItem {
+  width: 64%;
+  margin: 5% 20%;
+  background-color: green;
+  opacity: 0.92;
+}
+
+.releaseLogin {
+  width: 60%;
+  margin-left: 20%;
+  background-color: green;
+  opacity: 0.92;
+}

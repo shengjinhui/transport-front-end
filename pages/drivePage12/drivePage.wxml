@@ -1,0 +1,10 @@
+<view class='header'>
+  <open-data class='userImg' type="userAvatarUrl"></open-data>
+  <open-data class='userName' type="userNickName" lang="zh_CN"></open-data>
+</view>
+
+<view class='main'>
+  <button class='buttonItem' bindtap='task'>{{task}}</button>
+  <button class='buttonItem' bindtap='state'>{{state}}</button>
+  <button class='buttonItem' bindtap='record'>任务记录</button>
+</view>

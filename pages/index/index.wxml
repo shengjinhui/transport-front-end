@@ -1,0 +1,6 @@
+<!-- 此处的背景图片按照用户要求进行改变 -->
+<image class='backgroundImg' src='../../images/backgroundImg.jpg'></image>
+<view class='button'>
+  <button class='buttonItem' bindtap='toDriver'>司机登录</button>
+  <button class='buttonItem' bindtap='toBoss'>发布登录</button>
+</view>

@@ -1,0 +1,42 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.header{
+  width: 100%;
+  height: 23%;
+  background: linear-gradient(to right, #09bcb6, #0ada9c);
+  display: flex;
+  align-items: center;
+}
+
+.userImg{
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-left: 8%;
+  margin-right: 6%;
+
+
+}
+.main{
+  height: 80%;
+  margin-top: 15%;
+    /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
+}
+.buttonItem{
+  display: block;
+  width: 65%;
+  height: 10%;
+  margin-top: 18%;
+  background-color:  #0ada9c;
+  border-radius: 6px;
+
+
+  
+  
+}

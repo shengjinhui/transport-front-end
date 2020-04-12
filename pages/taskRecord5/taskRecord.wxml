@@ -1,0 +1,10 @@
+<view>
+  <view class='tasks' wx:for='{{tasks}}'  wx:key='this'>
+      <view class='number'>日期：{{item.createTime}}</view>
+      <view class='tasksItem' data-elementId='{{item.id}}' bindtap='showTaskDetail'>
+      <text class='driver'>主驾：{{item.driveraName}}</text>
+      <text class='driver'>副驾：{{item.driverbName}}</text>
+      <text class='mileage'>总里程：{{item.totalKilometer==null?"暂无数据":item.totalKilometer+"公里"}}</text>
+    </view>
+  </view>
+</view>

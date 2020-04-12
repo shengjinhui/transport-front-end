@@ -14,6 +14,7 @@
     <image class='turnImags' src='../../images/drectionDown.png'></image>
     <text class='distanceLable'>路程：</text>
     <input class='inputTwo' type='number' name='distance' bindinput='getFirstLength'></input>
+    公里
   </view>
 
   <view class='addressItem'>
@@ -24,6 +25,7 @@
     <image class='turnImags' src='../../images/drectionDown.png'></image>
     <text class='distanceLable'>路程：</text>
     <input class='inputTwo' type='number' bindinput='getSecondLength' data-index="{{index}}" value='{{lengthArr[index]}}'></input>
+    公里
   </view>
 
   <view class='addressItem'>

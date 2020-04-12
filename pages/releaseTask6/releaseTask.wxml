@@ -54,13 +54,13 @@
 
       <view class='mod address2'>
         <text class='key'>提货地址</text>
-        <input bindinput='getStaffLocation' class="input" maxlength='10' placeholder="请输入提货地点" />
+        <input bindinput='getStaffLocation' class="input" maxlength='20' placeholder="请输入提货地点" />
       </view>
    
 
       <view class='mod tonnage'>
         <text class='key'>总吨数</text>
-        <input bindinput="getWeight" class="input" name="weight" maxlength='10' placeholder="请输入总吨数" />
+        <input bindinput="getWeight" class="input" name="weight" maxlength='20' placeholder="请输入总吨数" />
       </view>
     </view>
 

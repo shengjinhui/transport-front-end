@@ -29,13 +29,10 @@ Page({
           let date = new Date(res.data.data[0].createTime)
           res.data.data[0].createTime = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate() + " " + appendZero(date.getHours()) + ":" + appendZero(date.getMinutes()) ;
           res.data.data[0].places.forEach((item) => {
-            console.log(item)
-            if (item.type == 1) {
-              console.log(item)
+            if (item.type === 1) {
               res.data.data[0].getStaffLocation=item.placeName
             }
-            else if (item.type == 2) {
-              console.log(item)
+            else if (item.type === 2) {
               res.data.data[0].destination = item.placeName
             }
           })

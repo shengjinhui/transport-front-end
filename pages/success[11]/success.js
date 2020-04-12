@@ -131,7 +131,7 @@ Page({
         return Number(total) + val
       }
     })
-    this.setData({totalLength: sum})
+    // this.setData({totalLength:sum})
     let reg = /[\u4e00-\u9fa50-9]{2,32}/;
     if (reg.test(this.data.originLocation)) {
     } else {
@@ -175,7 +175,7 @@ Page({
           } else {
             wx.showModal({
               title: '提示',
-              content: '操作失败',
+              content: res.data.msg,
               showCancel: false
             })
           }

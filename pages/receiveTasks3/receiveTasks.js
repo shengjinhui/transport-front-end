@@ -49,11 +49,11 @@ Page({
                 item.createTime = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate() + " " + appendZero(date.getHours()) + ":" + appendZero(date.getMinutes())
                 item.places.forEach((itemInner) => {
                   if (itemInner.type === 2) {
-                    item.destination = itemInner.placeName.slice(4);
+                    item.destination = itemInner.placeName;
                   } else if (itemInner.type === 0) {
-                    item.originLocation = itemInner.placeName.slice(4);
+                    item.originLocation = itemInner.placeName;
                   } else if (itemInner.type === 1) {
-                    item.getStaffLocation = itemInner.placeName.slice(4);
+                    item.getStaffLocation = itemInner.placeName;
                   }
                 })
               })
